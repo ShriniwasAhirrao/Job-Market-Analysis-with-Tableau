@@ -4,13 +4,14 @@ This repository contains a comprehensive job market analysis using Tableau and P
 ## Repository Structure  
 📂 **Job Market Analysis with Tableau**  
 │── 📂 **dataset**  
-│   └── *job_descriptions.csv*  — The dataset containing job market details  
+│   └── *job_descriptions.csv*  — The dataset containing job market details (Due to large file size, download "job_descriptions.csv" from Kaggle)  
 │── 📂 **tableau_notebook**  
 │   └── *Analysis book.twbx*  — Tableau workbook for visualizing insights  
 │── 📂 **website**  
 │   ├── *index.html*  — Homepage of the website  
 │   ├── *task.html*  — Page for task-related dashboards  
 │── 📄 **README.md**  — Repository documentation  
+
 
 
 ## Contents  
