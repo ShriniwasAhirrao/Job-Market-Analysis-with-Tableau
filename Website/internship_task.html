@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Tasks - Data Analyst</title>
+    <style>
+        /* Reset and Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 10px 20px;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 50px;
+            z-index: 1000;
+        }
+
+        .navbar .home {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Hamburger Menu */
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 5px;
+        }
+
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #34495e;
+            color: white;
+            transition: right 0.3s ease-in-out;
+            padding-top: 60px;
+            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: #1abc9c;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Content Styles */
+        .content-wrapper {
+            text-align: center;
+            margin-top: 80px; /* Adjusted for navbar */
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .task-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .task {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .task h3 {
+            color: #34495e;
+        }
+
+        .task p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 600px) {
+            .task-container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html" class="home">Home</a>
+        <div class="menu-icon" onclick="openSidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">×</span>
+        <a href="internship_task.html">Internship Task</a>
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <h1>My Internship Tasks - Data Analyst</h1>
+        <p><strong>Learn To Build A Real-Time Job Analytics Portal</strong></p>
+        <p>Below are the three tasks assigned during my internship.</p>
+
+        <!-- Task Details Container -->
+        <div class="task-container">
+            <h2>Task Details</h2>
+
+            <!-- Task 1 -->
+            <div class="task">
+                <h3>Task 1: Draw a chart between Job Portal and Company</h3>
+            </div>
+
+            <!-- Task 2 -->
+            <div class="task">
+                <h3>Task 2: Top 10 Companies with Maximum Data Engineers & Data Scientists</h3>
+                <p>
+                    - Exclude Asian countries.<br>
+                    - Preference: Female candidates.<br>
+                    - Ignore countries starting with 'C' and latitude below 10.<br>
+                    - Job posting date between 01/01/2023 - 06/01/2023.<br>
+                    - Qualification: Only B.Tech (ignore others).<br>
+                    - Display this chart **only between 3 PM IST - 5 PM IST**.
+                </p>
+                <p style="color: red; font-weight: bold;">
+                    ❗ No records found after applying the filters. The graph is empty.
+                </p>
+            </div>
+
+            <!-- Task 3 -->
+            <div class="task">
+                <h3>Task 3: Chart Between Company Size & Company Name</h3>
+                <p>
+                    - Company size < 50,000.<br>
+                    - Job title: Mechanical Engineer.<br>
+                    - Experience > 5 years.<br>
+                    - Country: Only Asian countries.<br>
+                    - Salary > $50k.<br>
+                    - Work type: Only Part-Time & Full-Time (ignore others).<br>
+                    - Filter candidates who applied via **Idealist**.<br>
+                    - Display this chart **only between 3 PM IST - 5 PM IST**.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.right = "0";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.right = "-250px";
+        }
+    </script>
+    <div class='tableauPlaceholder' id='viz1742758006974' style='position: relative'>
+        <noscript>
+            <a href='#'>
+                <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;Analysisbook_17427488656500&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> 
+            <param name='site_root' value='' />
+            <param name='name' value='Analysisbook_17427488656500&#47;Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;Analysisbook_17427488656500&#47;Dashboard1&#47;1.png' />
+             <param name='animate_transition' value='yes' />
+             <param name='display_static_image' value='yes' />
+             <param name='display_spinner' value='yes' />
+             <param name='display_overlay' value='yes' />
+             <param name='display_count' value='yes' />
+             <param name='language' value='en-GB' />
+             <param name='filter' value='publish=yes' />
+            </object>
+        </div>                
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1742758006974');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+</body>
+</html>
